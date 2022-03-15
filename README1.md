@@ -1,27 +1,16 @@
-# Deploy a Microservices App to IBM Cloud Code Engine
+# Running a batch job by using the IBM Cloud Code Engine
 
-This code pattern introduces you to [Code Engine](https://www.ibm.com/cloud/code-engine) and shows how to deploy a polyglot microservice travel application to the managed serverless platform. 
-The travel application used in this code pattern is a part of the [Bee Travels](https://bee-travels.github.io/) project that focuses on some of the first version services of the application.
- The services included in this code pattern are:
+Jobs are designed to run one time and exit.
 
-* Destination v1 (Node.js)
-
-* UI (Node.js/React)
-
-Below is the architecture diagram for v1 of the Bee Travels application:
-
-![](img/bee_travels_v1_architecture.png)
-
-[IBM Cloud Code Engine](https://cloud.ibm.com/docs/codeengine?topic=codeengine-getting-started) is a managed serverless platform that can run both applications that serve HTTP requests which includes web applications or microservices as well as run batch jobs that run once in order to complete a task. These workloads are run within the same [Kubernetes](https://kubernetes.io/) infrastructure and take advantage of open source technology including [Knative](https://knative.dev/) and [Istio](https://istio.io/). Knative is used to manage the serverless aspect of hosting applications, which includes auto-scaling of them based on incoming load - including down to zero when they are idle. Istio is used for routing and traffic management of applications. In addition, Code Engine is integrated with [LogDNA](https://www.logdna.com/) to allow for logging of your applications. As a developer, the benefit to using Code Engine is that this Kubernetes infrastructure and cluster complexity is invisible to you. No Kubernetes training is needed and developers can just focus on their code.
 
 # Architecture
 
 ![](img/architecture.png)
 
-1. The Code Engine build feature clones the Github repo and builds the container images for the different Bee Travels microservices in the repo based on the provided Dockerfiles.
-2. The newly built container images get pushed to repos on the provided image registry which in this case is Dockerhub.
-3. Code Engine applications are created for the Bee Travels microservices from the newly built container images on Dockerhub.
-4. The IBM load generation tool generates traffic to the Bee Travels application running in Code Engine. The auto-scaling component of Code Engine adjusts the number of running instances of the application based on the amount of incoming traffic.
+1. Building the container image based on the provided Dockerfile.
+2. The newly built container images is then pushed to the provided image registry which in this case is IBM Cloud Container Registry.
+3. Create and submit to run the Code Engine job by using the image.
+
 
 # Steps
 
@@ -40,11 +29,11 @@ To follow the steps in this code pattern, you need the following:
 
 ## 2. Clone the repo
 
-Clone the `CESample` repo locally. In a terminal window, run:
+Clone the `codeenginetryjob` repo locally. In a terminal window, run:
 
 ```
-$ git clone https://github.com/testrashmi/CESample
-$ cd CESample
+$ git clone https://github.com/testrashmi/codeenginetryjob
+$ cd codeenginetryjob
 ```
 
 ## 3. Build and Deploy to Code Engine
