@@ -38,23 +38,68 @@ Locally, launch the terminal:
 
 Perform the below:
 
-mkdir job
+Create a directory : mkdir job
 
-cd job
+Change Directory : cd job
+
+Create a script.sh file and copy the following contents.
 
 vi script.sh
 
-```
-#!/bin/bash
-set -x
-y=1
-while [ $y -le 5 ]
-do
-    echo "The first and second arguments are $1 & $2"
-    y=$(( $y + 1 ))	
-done
-```
+            ```
+            #!/bin/bash
+            set -x
+            y=1
+            while [ $y -le 5 ]
+            do
+                echo "The first and second arguments are $1 & $2"
+                y=$(( $y + 1 ))	
+            done
+            ```
+  
+  You should have the script.sh is the same folder where you have the Dockerfile. 
+  
+  Create the Dockerfile with the following contents which copy the script to the container and runs it part of the ENTRYPOINT using the arguments from CMD. 
+  
+            ```  
+            FROM centos:7
+            MAINTAINER Devopscube
+            RUN yum -y update && \
+                yum -y install httpd && \
+                yum clean all
+            COPY ./script.sh /
+            RUN chmod +x /script.sh
+            ENTRYPOINT ["/script.sh"]
+            CMD ["batman", "superman"]
+            ```
 
+    Lets build this Dockerfile with image name script-demo.
+    
+            ``
+            docker build -t script-demo .
+            ```
+     List images.
+
+             ```
+             docker images
+             ```
+             
+      Now lets create a container named demo using script-demo image.
+      
+              ```
+              docker run --name demo -d script-demo
+              ```
+      You can check the container logs using the following command.
+      
+            ```
+            docker logs demo -f   
+            ```
+              
+
+
+      
+      
+            
 ## 3. Build and Deploy to Code Engine
 
 1. From a terminal window, login to your IBM Cloud account using the CLI command: `ibmcloud login --sso`
