@@ -20,10 +20,11 @@ Jobs are designed to run one time and exit.
 # Steps
 
 1. Prerequisites
-2. Building the container image 
-3. Create and submit the Job
-4. Troubleshooting the Job
-5. Integrate the logging capability
+2. Create Dockerfile and run
+3. Building the container image 
+4. Create and submit the Job
+5. Troubleshooting the Job
+6. Integrate the logging capability
 
 ## 1. Prerequisites
 
@@ -46,7 +47,7 @@ Create a script.sh file and copy the following contents.
 
 vi script.sh
 
-            ```
+            
             #!/bin/bash
             set -x
             y=1
@@ -55,13 +56,13 @@ vi script.sh
                 echo "The first and second arguments are $1 & $2"
                 y=$(( $y + 1 ))	
             done
-            ```
+            
   
 You should have the script.sh is the same folder where you have the Dockerfile. 
   
 Create the Dockerfile with the following contents which copy the script to the container and runs it part of the ENTRYPOINT using the arguments from CMD. 
   
-            ```  
+            
             FROM centos:7
             MAINTAINER Devopscube
             RUN yum -y update && \
@@ -71,30 +72,54 @@ Create the Dockerfile with the following contents which copy the script to the c
             RUN chmod +x /script.sh
             ENTRYPOINT ["/script.sh"]
             CMD ["batman", "superman"]
-            ```
+            
 
  Lets build this Dockerfile with image name script-demo.
     
-            ``
+           
             docker build -t script-demo .
-            ```
+           
  List images.
 
-             ```
+             
              docker images
-             ```
              
   Now lets create a container named demo using script-demo image.
       
-              ```
+            
               docker run --name demo -d script-demo
-              ```
+            
   You can check the container logs using the following command.
       
-            ```
             docker logs demo -f   
-            ```
-              
+            
+  You see the below output
+    
+            My second and third argument is batman & superman
+            My second and third argument is batman & superman
+            My second and third argument is batman & superman
+            My second and third argument is batman & superman
+            My second and third argument is batman & superman
+            + y=1
+            + '[' 1 -le 5 ']'
+            + echo 'My second and third argument is batman & superman'
+            + y=2
+            + '[' 2 -le 5 ']'
+            + echo 'My second and third argument is batman & superman'
+            + y=3
+            + '[' 3 -le 5 ']'
+            + echo 'My second and third argument is batman & superman'
+            + y=4
+            + '[' 4 -le 5 ']'
+            + echo 'My second and third argument is batman & superman'
+            + y=5
+            + '[' 5 -le 5 ']'
+            + echo 'My second and third argument is batman & superman'
+            + y=6
+            + '[' 6 -le 5 ']'
+            
+   
+
 
 
       
