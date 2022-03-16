@@ -57,9 +57,9 @@ vi script.sh
             done
             ```
   
-  You should have the script.sh is the same folder where you have the Dockerfile. 
+You should have the script.sh is the same folder where you have the Dockerfile. 
   
-  Create the Dockerfile with the following contents which copy the script to the container and runs it part of the ENTRYPOINT using the arguments from CMD. 
+Create the Dockerfile with the following contents which copy the script to the container and runs it part of the ENTRYPOINT using the arguments from CMD. 
   
             ```  
             FROM centos:7
@@ -73,23 +73,23 @@ vi script.sh
             CMD ["batman", "superman"]
             ```
 
-    Lets build this Dockerfile with image name script-demo.
+ Lets build this Dockerfile with image name script-demo.
     
             ``
             docker build -t script-demo .
             ```
-     List images.
+ List images.
 
              ```
              docker images
              ```
              
-      Now lets create a container named demo using script-demo image.
+  Now lets create a container named demo using script-demo image.
       
               ```
               docker run --name demo -d script-demo
               ```
-      You can check the container logs using the following command.
+  You can check the container logs using the following command.
       
             ```
             docker logs demo -f   
