@@ -5,7 +5,7 @@ https://cloud.ibm.com/docs/codeengine?topic=codeengine-run-job-tutorial
 https://cloud.ibm.com/docs/codeengine?topic=codeengine-run-job-tutorial
 
 
-# Running a batch job by using the IBM Cloud Code Engine
+# Troubleshooting the IBM Cloud Code Engine batch job 
 
 Jobs are designed to run one time and exit.
 
@@ -21,10 +21,11 @@ Jobs are designed to run one time and exit.
 
 # Steps
 
-1. [Prerequisites](#1-prerequisites)
-2. [Clone the repo](#2-clone-the-repo)
-3. [Build and Deploy to Code Engine](#3-build-and-deploy-to-code-engine)
-4. [Generate Traffic](#4-generate-traffic)
+1. Prerequisites
+2. Building the container image 
+3. Create and submit the Job
+4. Troubleshooting the Job
+5. Integrate the logging capability
 
 ## 1. Prerequisites
 
@@ -32,16 +33,16 @@ To follow the steps in this code pattern, you need the following:
 
 * [IBM Cloud account](https://cloud.ibm.com/registration)
 * [IBM Cloud CLI](https://cloud.ibm.com/docs/cli?topic=cli-getting-started)
-* [Dockerhub account](https://hub.docker.com/)
 
-## 2. Clone the repo
+## 2. Building the container image 
 
-Clone the `codeenginetryjob` repo locally. In a terminal window, run:
+Locally, launch the terminal:
+mkdir job
+cd job
+vi script.sh![image](https://user-images.githubusercontent.com/52536794/158547687-a20dd7dc-1b4d-47bd-b545-a3f7a0fbc5fa.png
 
-```
-$ git clone https://github.com/testrashmi/codeenginetryjob
-$ cd codeenginetryjob
-```
+
+
 
 ## 3. Build and Deploy to Code Engine
 
