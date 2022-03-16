@@ -12,8 +12,6 @@ Jobs are designed to run one time and exit.
 
 # Architecture
 
-![](img/architecture.png)
-
 1. Building the container image based on the provided Dockerfile.
 2. The newly built container images is then pushed to the provided image registry which in this case is IBM Cloud Container Registry.
 3. Create and submit to run the Code Engine job by using the image.
@@ -37,12 +35,25 @@ To follow the steps in this code pattern, you need the following:
 ## 2. Building the container image 
 
 Locally, launch the terminal:
+
+Perform the below:
+
 mkdir job
+
 cd job
-vi script.sh![image](https://user-images.githubusercontent.com/52536794/158547687-a20dd7dc-1b4d-47bd-b545-a3f7a0fbc5fa.png
 
+vi script.sh
 
-
+```
+#!/bin/bash
+set -x
+y=1
+while [ $y -le 5 ]
+do
+    echo "The first and second arguments are $1 & $2"
+    y=$(( $y + 1 ))	
+done
+```
 
 ## 3. Build and Deploy to Code Engine
 
