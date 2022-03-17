@@ -1,9 +1,3 @@
-Under contruction
-
-https://cloud.ibm.com/docs/codeengine?topic=codeengine-run-job-tutorial
-
-https://cloud.ibm.com/docs/codeengine?topic=codeengine-run-job-tutorial
-
 
 # Troubleshooting the IBM Cloud Code Engine batch job 
 
@@ -42,15 +36,13 @@ You need the following:
 
 Locally, launch the terminal:
 
-* Perform the below:
-
 * Create a directory : mkdir job
 
 * Change the Directory : cd job
 
 * Create a script.sh file and copy the following contents.
 
-* vi script.sh
+ * vi script.sh
 
             
             #!/bin/bash
@@ -63,7 +55,7 @@ Locally, launch the terminal:
             done
             
   
-Note: You should have the script.sh is the same folder where you have the Dockerfile. 
+Note: You should have the script.sh in the same folder where you have the Dockerfile. 
   
 * Create the Dockerfile with the following contents which copy the script to the container and runs it part of the ENTRYPOINT using the arguments from CMD. 
   
@@ -79,9 +71,9 @@ Note: You should have the script.sh is the same folder where you have the Docker
             CMD ["batman", "superman"]
             
 
- * Lets build this Dockerfile with image name script-demo.
+ * Lets build this Dockerfile with the image name script-demo.
     
-            docker build -t image_name directory
+            docker build -t _image-name_ _directory_
            
             docker build -t script-demo .
            
@@ -178,7 +170,7 @@ Note: You should have the script.sh is the same folder where you have the Docker
 
   * Enter a name for the project say JOB. The name must be unique for all your projects within the specified location.
 
-  * Choose the resource group say APP where you want to create the project.
+  * Choose the resource group say App where you want to create the project.
 
   * Click Create.
 
@@ -213,11 +205,11 @@ Note: You should have the script.sh is the same folder where you have the Docker
 
    * ibmcloud login --sso
    
-   * ibmcloud target -g App
+   * ibmcloud target -g _ResourceGroup_   ex:  ibmcloud target -g App
 
    * ibmcloud ce project list
    
-   * ibmcloud ce project select --name JOB
+   * ibmcloud ce project select --name _Jobname_   ex:   ibmcloud ce project select --name JOB
    
    * ibmcloud ce jobrun list
    
@@ -230,9 +222,7 @@ Note: You should have the script.sh is the same folder where you have the Docker
    * Run 'ibmcloud ce jobrun logs -f -n scriptjob-jobrun-kgp59' to follow the logs of the job run instances.
    
 
-
-
-For more details and documentation on the Code Engine CLI, go [here](https://cloud.ibm.com/docs/codeengine?topic=codeengine-cli).
+   * For more details and documentation on the Code Engine CLI, go [here](https://cloud.ibm.com/docs/codeengine?topic=codeengine-cli).
 
 
 To [view logs](https://cloud.ibm.com/docs/codeengine?topic=codeengine-view-logs#view-logs-ui) for an app or a job in the Code Engine console, you must create an IBM Log Analysis instance in the same region as your Code Engine project. 
@@ -253,7 +243,7 @@ You can select Lite Plan and then create
 
 From your Code Engine jobrun page, click Configure logging.Select the newly created Log Analysis instance in the prior step. Click Select to receive platform logs.
 
-Now that platform logging is configured, from your Code Engine app page, click Launch logging to open your platform logs window. 
+Now that platform logging is configured from your Code Engine app page, click Launch logging to open your platform logs window. 
 
 Under Observability dashboard, instance can be seen.
 
@@ -276,10 +266,7 @@ You have completed the steps to configure your Log Analysis instance such that i
 Alternatively, you can also configure a Log Analysis instance by using the Observability dashboard to create the instance, and then by configuring platform logs. After you create your instance, click Configure platform logs. Select the Log Analysis instance to receive the platform log data by specifying a region and your log instance.
 
 
-
-
-
-
 # CONGRATULATIONS!
-Kudos to you! 
+Kudos to you! You have learned how to run jobs in IBM Cloud Code Engine.
+
 
