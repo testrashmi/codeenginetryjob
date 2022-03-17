@@ -146,36 +146,48 @@ Note: You should have the script.sh is the same folder where you have the Docker
 
 * The image created gets listed here:  https://cloud.ibm.com/registry/images
 
+* To add registry access to Code Engine, we have to create an API key 
+
+   * Navigate to https://cloud.ibm.com/iam/apikeys
+
+   * Click Create an IBM Cloud API key.
+   
+   * Enter a name and optional description for your API key and click Create.
+   
+   * Copy the API key or click download to save it.
+
+      Ex:
+
+      Name: registrytokyo
+
+      API key: CoDKpQraJN94KeF5bvx6d_Y9FWiW8sbKA49lcp9Il4Sw
+
+      yA_8lDJHqxLM5HfpeZ0wtVqL1QazUgFficD-lkj3_YA9
+
 * Create a project
 
-  Navigate to https://cloud.ibm.com/codeengine/projects . 
+  * Navigate to https://cloud.ibm.com/codeengine/projects . 
 
-  Select a project from the list of available projects. You can also create a new one. Note that you must have a selected project to create a job.
+  * Select a project from the list of available projects. You can also create a new one. Note that you must have a selected project to create a job.
 
-  Let's create a new one.
+  * Let's create a new one.Choose a location to deploy the project say Tokyo .
 
-  Choose a location to deploy the project.
+  * Enter a name for the project say JOB. The name must be unique for all your projects within the specified location.
 
-  Enter a name for the project. The name must be unique for all your projects within the specified location.
+  * Choose the resource group say APP where you want to create the project.
 
-  Choose the resource group where you want to create the project.
+  * Click Create.
 
-  Click Create.
+  * On the Overview page of Project JOB, click create Job. Provide the name say 'scriptjob'.
 
+   * Choose the code to run where the container image radio button is selected. 
+   
+   * Provide the image reference as  jp.icr.io/cesample/samplescript:latest and click configure image
+   
+   * Click Registry access secret 
+   
 
-8. Add registry access to Code Engine
-
-Navigate to https://cloud.ibm.com/iam/apikeys
-
-Click Create an IBM Cloud API key.
-Enter a name and optional description for your API key and click Create.
-Copy the API key or click download to save it.
-
-Ex:
-Name: registryJP
-API key: CoDKpQraJN94KeF5bvx6d_Y9FWiW8sbKA49lcp9Il4Sw
-
-_ZaAa6sZ4y20m-oqSIK4n2Ukeqdip9urTmWvj4xTWxyQ
+8.
 
 9. Creating image registry access secret:
 
