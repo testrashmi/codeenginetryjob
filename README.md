@@ -1,5 +1,5 @@
 
-# Troubleshooting the IBM Cloud Code Engine batch job 
+# Running the IBM Cloud Code Engine batch job 
 
 **What is a batch job?**
 
@@ -21,7 +21,7 @@ Jobs are designed to run one time and exit.
 2. Create Dockerfile and run
 3. Building the container image 
 4. Create and submit the Job
-5. Troubleshooting the Job
+5. Accessing job details with the CLI 
 6. Integrate the logging capability
 
 ## 1. Prerequisites
@@ -225,43 +225,46 @@ Note: You should have the script.sh in the same folder where you have the Docker
    * For more details and documentation on the Code Engine CLI, go [here](https://cloud.ibm.com/docs/codeengine?topic=codeengine-cli).
 
 
-To [view logs](https://cloud.ibm.com/docs/codeengine?topic=codeengine-view-logs#view-logs-ui) for an app or a job in the Code Engine console, you must create an IBM Log Analysis instance in the same region as your Code Engine project. 
+# Integrate the logging capability
 
-Code Engine makes it easy to enable logging for your apps and jobs.
+ To [view logs](https://cloud.ibm.com/docs/codeengine?topic=codeengine-view-logs#view-logs-ui) for an app or a job in the Code Engine console, you must 
+ create an IBM Log Analysis instance in the same region as your Code Engine project. 
 
-![](img/AddLogging.png)
+ Code Engine makes it easy to enable logging for your apps and jobs.
 
-If you have previously created a Log Analysis instance, launch logging displays and you do not need to complete this step.
+ ![](img/AddLogging.png)
 
-Click Add logging to create the IBM Log Analysis instance. 
+ If you have previously created a Log Analysis instance, launch logging displays and you do not need to complete this step.
 
-Say location: Tokyo
+ * Click Add logging to create the IBM Log Analysis instance. 
 
-Resource group: App
+    * Say location: Tokyo
 
-You can select Lite Plan and then create
+    * Resource group: App
 
-From your Code Engine jobrun page, click Configure logging.Select the newly created Log Analysis instance in the prior step. Click Select to receive platform logs.
+    * You can select Lite Plan and then create
 
-Now that platform logging is configured from your Code Engine app page, click Launch logging to open your platform logs window. 
+* From your Code Engine jobrun page, click Configure logging.Select the newly created Log Analysis instance in the prior step. Click Select to receive platform logs.
 
-Under Observability dashboard, instance can be seen.
+* Now that platform logging is configured from your Code Engine app page, click Launch logging to open your platform logs window. 
 
-https://cloud.ibm.com/observe/logging
+* Under Observability dashboard, instance can be seen.
 
-![](img/Platformlogs.png)
+  https://cloud.ibm.com/observe/logging
 
-From your Code Engine scriptjob, click Submit job.
+  ![](img/Platformlogs.png)
 
-Job runs : View all of your job runs submitted from your configuration.
+* From your Code Engine scriptjob, click Submit job.
 
-![](img/Jobrunstab.png)
+* Job runs : View all of your job runs submitted from your configuration.
 
-You can view platform logs in the platform logs window.
+  ![](img/Jobrunstab.png)
 
-You have completed the steps to configure your Log Analysis instance such that it can receive platform logging for your Code Engine job.
+* You can view platform logs in the platform logs window.
 
-![](img/logs.png)
+  You have completed the steps to configure your Log Analysis instance such that it can receive platform logging for your Code Engine job.
+
+  ![](img/logs.png)
 
 Alternatively, you can also configure a Log Analysis instance by using the Observability dashboard to create the instance, and then by configuring platform logs. After you create your instance, click Configure platform logs. Select the Log Analysis instance to receive the platform log data by specifying a region and your log instance.
 
