@@ -185,7 +185,7 @@ Note: You should have the script.sh in the same folder where you have the Docker
 
     * Click Done and then create Job.
      
-    ![](scriptjob.png)
+    ![](img/scriptjob.png)
      
     * Submit Job.
 
