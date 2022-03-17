@@ -185,6 +185,10 @@ Note: You should have the script.sh is the same folder where you have the Docker
    * Provide the image reference as  jp.icr.io/cesample/samplescript:latest and click configure image
    
    * Click Registry access secret 
+
+   ![](secretaccess.png)
+
+  
    
 
 8.
