@@ -265,9 +265,8 @@ Note: You should have the script.sh in the same folder where you have the Docker
 
   ![](img/logs.png)
 
-   Alternatively, you can also configure a Log Analysis instance by using the Observability dashboard to create the instance, and then by configuring  
-   platform logs.    
-   After you create your instance, click Configure platform logs. 
+   Alternatively, you can also configure a Log Analysis instance by using the Observability dashboard to create the instance, and then by configuring 
+   platform logs.    After you create your instance, click Configure platform logs. 
    Select the Log Analysis instance to receive the platform log data by specifying a region and your log instance.
 
 
