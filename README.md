@@ -181,11 +181,11 @@ Note: You should have the script.sh in the same folder where you have the Docker
    
     * Click [Registry access secret](https://cloud.ibm.com/docs/codeengine?topic=codeengine-add-registry#add-registry-access-ce) 
 
-     ![](img/secretaccess.png)
+    ![](img/secretaccess.png)
 
     * Click Done and then create Job.
      
-     ![](scriptjob.png)
+    ![](scriptjob.png)
      
     * Submit Job.
 
