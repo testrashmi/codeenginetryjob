@@ -7,6 +7,10 @@ https://cloud.ibm.com/docs/codeengine?topic=codeengine-run-job-tutorial
 
 # Troubleshooting the IBM Cloud Code Engine batch job 
 
+**What is a batch job?**
+
+A batch job is a scheduled program that is assigned to run on a computer without further user interaction.
+Batch jobs are frequently used to automate tasks that need to be performed on a regular basis.
 Jobs are designed to run one time and exit.
 
 
@@ -184,34 +188,24 @@ Note: You should have the script.sh is the same folder where you have the Docker
    
    * Provide the image reference as  jp.icr.io/cesample/samplescript:latest and click configure image
    
-   * Click Registry access secret 
+   * Click [Registry access secret](https://cloud.ibm.com/docs/codeengine?topic=codeengine-add-registry#add-registry-access-ce) 
 
-   ![](secretaccess.png)
+     ![](img/secretaccess.png)
 
-  
+   * Click Done.
+
+   * Create Job.
    
-
-8.
-
-9. Creating image registry access secret:
-
-```
- ibmcloud ce registry create --n myregistryjp --s jp.icr.io --u iamapikey --p "CoDKpQraJN94KeF5bvx6d_Y9FWiW8sbKA49lcp9Il4Sw"
-```
-
-
-* `-n` names the image registry access secret
-* `-u` specifies the username to access the registry server
-* `-p` specifies the password to access the registry server
-* `-s` is the URL of the registry server
-
-For Docker Hub, the server name is https://index.docker.io/v1/
-For Container Registry, the server name is <region>.icr.io
-
-
-
-
-
+     ![](scriptjob.png)
+     
+   * Submit Job.
+ 
+     ![](img/scriptjob.png)
+     
+    * The job is successful
+     
+     ![](img/scriptjob.png)
+   
 
 
 
@@ -234,5 +228,6 @@ For more details and documentation on the Code Engine CLI, go [here](https://clo
 
 
 
-# Congratulations
+# CONGRATULATIONS!
+Kudos to you! 
 
