@@ -14,6 +14,7 @@ Jobs are designed to run one time and exit.
 2. Push the newly built container images to the IBM Cloud Container Registry.
 3. Create and submit the Code Engine job by using the container image.
 
+![](img/arch.png)
 
 # Steps
 
