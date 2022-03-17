@@ -74,7 +74,7 @@ Note: You should have the script.sh in the same folder where you have the Docker
 
  * Lets build this Dockerfile with the image name script-demo.
     
-            docker build -t <imagename< <directory>
+            docker build -t <imagename> <directory>
            
             docker build -t script-demo .
            
