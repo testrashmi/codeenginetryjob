@@ -157,8 +157,10 @@ Note: You should have the script.sh in the same folder where you have the Docker
       Name: registrytokyo
 
       API key: CoDKpQraJN94KeF5bvx6d_Y9FWiW8sbKA49lcp9Il4Sw
+      
+ ## 4. Create and submit the Job      
 
-* Create a project
+  * Create a project
 
   * Navigate to https://cloud.ibm.com/codeengine/projects . 
 
@@ -199,7 +201,7 @@ Note: You should have the script.sh in the same folder where you have the Docker
      ![](img/successjob.png)      
 
      
-# Accessing job details with the CLI  
+# 5. Accessing job details with the CLI  
 
    * ibmcloud login --sso
    
@@ -223,18 +225,18 @@ Note: You should have the script.sh in the same folder where you have the Docker
    * For more details and documentation on the Code Engine CLI, go [here](https://cloud.ibm.com/docs/codeengine?topic=codeengine-cli).
 
 
-# Integrate the logging capability
+# 6. Integrate the logging capability
 
- To [view logs](https://cloud.ibm.com/docs/codeengine?topic=codeengine-view-logs#view-logs-ui) for an app or a job in the Code Engine console, you must 
- create an IBM Log Analysis instance in the same region as your Code Engine project. 
+   To [view logs](https://cloud.ibm.com/docs/codeengine?topic=codeengine-view-logs#view-logs-ui) for an app or a job in the Code Engine console, you must 
+   create an IBM Log Analysis instance in the same region as your Code Engine project. 
 
- Code Engine makes it easy to enable logging for your apps and jobs.
+   Code Engine makes it easy to enable logging for your apps and jobs.
 
- ![](img/AddLogging.png)
+   ![](img/AddLogging.png)
 
- If you have previously created a Log Analysis instance, launch logging displays and you do not need to complete this step.
+   If you have previously created a Log Analysis instance, launch logging displays and you do not need to complete this step.
 
- * Click Add logging to create the IBM Log Analysis instance. 
+    * Click Add logging to create the IBM Log Analysis instance. 
 
     * Say location: Tokyo
 
@@ -242,29 +244,33 @@ Note: You should have the script.sh in the same folder where you have the Docker
 
     * You can select Lite Plan and then create
 
-* From your Code Engine jobrun page, click Configure logging.Select the newly created Log Analysis instance in the prior step. Click Select to receive platform logs.
+    * From your Code Engine jobrun page, click Configure logging.Select the newly created Log Analysis instance in the prior step.
+      Click Select to receive platform logs.
 
-* Now that platform logging is configured from your Code Engine app page, click Launch logging to open your platform logs window. 
+    * Now that platform logging is configured from your Code Engine app page, click Launch logging to open your platform logs window. 
 
-* Under Observability dashboard, instance can be seen.
+    * Under Observability dashboard, instance can be seen.
 
-  https://cloud.ibm.com/observe/logging
+    https://cloud.ibm.com/observe/logging
 
-  ![](img/Platformlogs.png)
+    ![](img/Platformlogs.png)
 
-* From your Code Engine scriptjob, click Submit job.
+    * From your Code Engine scriptjob, click Submit job.
 
-* Job runs : View all of your job runs submitted from your configuration.
+    * Job runs : View all of your job runs submitted from your configuration.
 
-  ![](img/Jobrunstab.png)
+    ![](img/Jobrunstab.png)
 
-* You can view platform logs in the platform logs window.
+    * You can view platform logs in the platform logs window.
 
-  You have completed the steps to configure your Log Analysis instance such that it can receive platform logging for your Code Engine job.
+     You have completed the steps to configure your Log Analysis instance such that it can receive platform logging for your Code Engine job.
 
-  ![](img/logs.png)
+    ![](img/logs.png)
 
-Alternatively, you can also configure a Log Analysis instance by using the Observability dashboard to create the instance, and then by configuring platform logs. After you create your instance, click Configure platform logs. Select the Log Analysis instance to receive the platform log data by specifying a region and your log instance.
+     Alternatively, you can also configure a Log Analysis instance by using the Observability dashboard to create the instance, and then by configuring  
+     platform logs. 
+     After you create your instance, click Configure platform logs. 
+     Select the Log Analysis instance to receive the platform log data by specifying a region and your log instance.
 
 
 # CONGRATULATIONS!
