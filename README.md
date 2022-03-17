@@ -253,7 +253,7 @@ Note: You should have the script.sh in the same folder where you have the Docker
 
   ![](img/Platformlogs.png)
 
-   * From your Code Engine scriptjob, click Submit job.
+   * From your Code Engine scriptjob page, click Submit job.
    
    * Job runs : View all of your job runs submitted from your configuration.
 
