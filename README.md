@@ -192,7 +192,7 @@ Note: You should have the script.sh in the same folder where you have the Docker
      ![](img/jobsubmit.png)
  
      
-    * The job is successful
+    * The job run is successful
 
      ![](img/successjob.png)      
 
