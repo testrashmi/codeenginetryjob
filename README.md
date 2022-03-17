@@ -73,7 +73,7 @@ Note: You should have the script.sh in the same folder where you have the Docker
 
  * Lets build this Dockerfile with the image name script-demo.
     
-            docker build -t _image-name_ _directory_
+            docker build -t <imagename< <directory>
            
             docker build -t script-demo .
            
@@ -85,7 +85,7 @@ Note: You should have the script.sh in the same folder where you have the Docker
      
               docker run --name demo -d script-demo
             
- * You can check the container logs using the following command.
+ * You can check the container logs .
       
             docker logs demo -f   
             
@@ -158,8 +158,6 @@ Note: You should have the script.sh in the same folder where you have the Docker
 
       API key: CoDKpQraJN94KeF5bvx6d_Y9FWiW8sbKA49lcp9Il4Sw
 
-      yA_8lDJHqxLM5HfpeZ0wtVqL1QazUgFficD-lkj3_YA9
-
 * Create a project
 
   * Navigate to https://cloud.ibm.com/codeengine/projects . 
@@ -176,27 +174,27 @@ Note: You should have the script.sh in the same folder where you have the Docker
 
   * On the Overview page of Project JOB, click create Job. Provide the name say 'scriptjob'.
 
-   * Choose the code to run where the container image radio button is selected. 
+    * Choose the code to run where the container image radio button is selected. 
    
-   * Provide the image reference as  jp.icr.io/cesample/samplescript:latest and click configure image
+    * Provide the image reference as  jp.icr.io/cesample/samplescript:latest and click configure image
    
-   * Click [Registry access secret](https://cloud.ibm.com/docs/codeengine?topic=codeengine-add-registry#add-registry-access-ce) 
+    * Click [Registry access secret](https://cloud.ibm.com/docs/codeengine?topic=codeengine-add-registry#add-registry-access-ce) 
 
      ![](img/secretaccess.png)
 
-   * Click Done.
+    * Click Done.
 
-   * Create Job.
+    * Create Job.
      
      ![](scriptjob.png)
      
 
-   * Submit Job.
+    * Submit Job.
 
      ![](img/jobsubmit.png)
  
      
-   * The job is successful
+    * The job is successful
 
      ![](img/successjob.png)      
 
@@ -205,11 +203,11 @@ Note: You should have the script.sh in the same folder where you have the Docker
 
    * ibmcloud login --sso
    
-   * ibmcloud target -g _ResourceGroup_   ex:  ibmcloud target -g App
+   * ibmcloud target -g _ResourceGroup_                   ex:  ibmcloud target -g App
 
    * ibmcloud ce project list
    
-   * ibmcloud ce project select --name _Jobname_   ex:   ibmcloud ce project select --name JOB
+   * ibmcloud ce project select --name _Jobname_          ex:   ibmcloud ce project select --name JOB
    
    * ibmcloud ce jobrun list
    
@@ -270,6 +268,6 @@ Alternatively, you can also configure a Log Analysis instance by using the Obser
 
 
 # CONGRATULATIONS!
-Kudos to you! You have learned how to run jobs in IBM Cloud Code Engine.
+Kudos to you! You have learned how to run jobs in IBM Cloud Code Engine and to view logs in LogDNA
 
 
