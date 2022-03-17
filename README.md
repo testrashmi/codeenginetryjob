@@ -251,26 +251,26 @@ Note: You should have the script.sh in the same folder where you have the Docker
 
    * Under Observability dashboard, instance can be seen.
 
-    https://cloud.ibm.com/observe/logging
+   https://cloud.ibm.com/observe/logging
 
-    ![](img/Platformlogs.png)
+  ![](img/Platformlogs.png)
 
    * From your Code Engine scriptjob, click Submit job.
    
    * Job runs : View all of your job runs submitted from your configuration.
 
-    ![](img/Jobrunstab.png)
+  ![](img/Jobrunstab.png)
 
    * You can view platform logs in the platform logs window.
 
-     You have completed the steps to configure your Log Analysis instance such that it can receive platform logging for your Code Engine job.
+   You have completed the steps to configure your Log Analysis instance such that it can receive platform logging for your Code Engine job.
 
-    ![](img/logs.png)
+  ![](img/logs.png)
 
-     Alternatively, you can also configure a Log Analysis instance by using the Observability dashboard to create the instance, and then by configuring  
-     platform logs. 
-     After you create your instance, click Configure platform logs. 
-     Select the Log Analysis instance to receive the platform log data by specifying a region and your log instance.
+   Alternatively, you can also configure a Log Analysis instance by using the Observability dashboard to create the instance, and then by configuring  
+   platform logs.    
+   After you create your instance, click Configure platform logs. 
+   Select the Log Analysis instance to receive the platform log data by specifying a region and your log instance.
 
 
 # CONGRATULATIONS!
