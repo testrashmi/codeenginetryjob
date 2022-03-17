@@ -236,32 +236,32 @@ Note: You should have the script.sh in the same folder where you have the Docker
 
    If you have previously created a Log Analysis instance, launch logging displays and you do not need to complete this step.
 
-    * Click Add logging to create the IBM Log Analysis instance. 
+   * Click Add logging to create the IBM Log Analysis instance. 
 
-    * Say location: Tokyo
+   * Say location: Tokyo
 
-    * Resource group: App
+   * Resource group: App
 
-    * You can select Lite Plan and then create
-
-    * From your Code Engine jobrun page, click Configure logging.Select the newly created Log Analysis instance in the prior step.
+   * You can select Lite Plan and then create.
+   
+   * From your Code Engine jobrun page, click Configure logging.Select the newly created Log Analysis instance in the prior step.
       Click Select to receive platform logs.
 
-    * Now that platform logging is configured from your Code Engine app page, click Launch logging to open your platform logs window. 
+   * Now that platform logging is configured from your Code Engine app page, click Launch logging to open your platform logs window. 
 
-    * Under Observability dashboard, instance can be seen.
+   * Under Observability dashboard, instance can be seen.
 
     https://cloud.ibm.com/observe/logging
 
     ![](img/Platformlogs.png)
 
-    * From your Code Engine scriptjob, click Submit job.
-
-    * Job runs : View all of your job runs submitted from your configuration.
+   * From your Code Engine scriptjob, click Submit job.
+   
+   * Job runs : View all of your job runs submitted from your configuration.
 
     ![](img/Jobrunstab.png)
 
-    * You can view platform logs in the platform logs window.
+   * You can view platform logs in the platform logs window.
 
      You have completed the steps to configure your Log Analysis instance such that it can receive platform logging for your Code Engine job.
 
