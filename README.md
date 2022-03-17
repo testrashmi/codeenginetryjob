@@ -204,27 +204,12 @@ Note: You should have the script.sh is the same folder where you have the Docker
      
     * The job is successful
      
-     ![](img/scriptjob.png)
+     ![](img/jobsubmit.png)
    
 
 
 
 For more details and documentation on the Code Engine CLI, go [here](https://cloud.ibm.com/docs/codeengine?topic=codeengine-cli).
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
