@@ -13,8 +13,8 @@ Jobs are designed to run one time and exit.
 # Architecture
 
 1. Building the container image based on the provided Dockerfile.
-2. The newly built container images is then pushed to the provided image registry which in this case is IBM Cloud Container Registry.
-3. Create and submit to run the Code Engine job by using the image.
+2. Push the newly built container images to the IBM Cloud Container Registry.
+3. Create and submit the Code Engine job by using the container image.
 
 
 # Steps
@@ -28,10 +28,11 @@ Jobs are designed to run one time and exit.
 
 ## 1. Prerequisites
 
-To follow the steps in this code pattern, you need the following:
+You need the following:
 
 * [IBM Cloud account](https://cloud.ibm.com/registration)
 * [IBM Cloud CLI](https://cloud.ibm.com/docs/cli?topic=cli-getting-started)
+* [Docker Engine](https://cloud.ibm.com/docs/Registry?topic=Registry-getting-started#gs_registry_images_pulling)
 
 ## 2. Create Dockerfile and run 
 
@@ -145,7 +146,21 @@ Note: You should have the script.sh is the same folder where you have the Docker
 
 * The image created gets listed here:  https://cloud.ibm.com/registry/images
 
+* Create a project
 
+  Navigate to https://cloud.ibm.com/codeengine/projects . 
+
+  Select a project from the list of available projects. You can also create a new one. Note that you must have a selected project to create a job.
+
+  Let's create a new one.
+
+  Choose a location to deploy the project.
+
+  Enter a name for the project. The name must be unique for all your projects within the specified location.
+
+  Choose the resource group where you want to create the project.
+
+  Click Create.
 
 
 8. Add registry access to Code Engine
