@@ -221,9 +221,13 @@ Note: You should have the script.sh is the same folder where you have the Docker
    
    * ibmcloud ce jobrun list
    
+    ![](img/ListingJobruns.png)
+
    * ibmcloud ce jobrun get --name scriptjob-jobrun-kgp59
    
-   * ibmcloud ce jobrun events -n scriptjob-jobrun-kgp59
+   * Run 'ibmcloud ce jobrun events -n scriptjob-jobrun-kgp59' to get the system events of the job run instances.
+
+   * Run 'ibmcloud ce jobrun logs -f -n scriptjob-jobrun-kgp59' to follow the logs of the job run instances.
    
 
 
