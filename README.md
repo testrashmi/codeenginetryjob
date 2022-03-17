@@ -183,13 +183,10 @@ Note: You should have the script.sh in the same folder where you have the Docker
 
      ![](img/secretaccess.png)
 
-    * Click Done.
-
-    * Create Job.
+    * Click Done and then create Job.
      
      ![](scriptjob.png)
      
-
     * Submit Job.
 
      ![](img/jobsubmit.png)
