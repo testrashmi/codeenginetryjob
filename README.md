@@ -161,8 +161,6 @@ Note: You should have the script.sh in the same folder where you have the Docker
       
  ## 4. Create and submit the Job      
 
-  * Create a project
-
   * Navigate to https://cloud.ibm.com/codeengine/projects . 
 
   * Select a project from the list of available projects. You can also create a new one. Note that you must have a selected project to create a job.
