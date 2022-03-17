@@ -201,11 +201,13 @@ Note: You should have the script.sh in the same folder where you have the Docker
 
    * ibmcloud login --sso
    
-   * ibmcloud target -g _ResourceGroup_                   ex:  ibmcloud target -g App
+   * ibmcloud target -g _ResourceGroup_                   
+     ex:  ibmcloud target -g App
 
    * ibmcloud ce project list
    
-   * ibmcloud ce project select --name _Jobname_          ex:   ibmcloud ce project select --name JOB
+   * ibmcloud ce project select --name _Jobname_          
+     ex:  ibmcloud ce project select --name JOB
    
    * ibmcloud ce jobrun list
    
