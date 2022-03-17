@@ -200,11 +200,30 @@ Note: You should have the script.sh is the same folder where you have the Docker
      
 
    * Submit Job.
+
+     ![](img/jobsubmit.png)
  
      
-    * The job is successful
+   * The job is successful
+
+     ![](img/successjob.png)      
+
      
-     ![](img/jobsubmit.png)
+# Accessing job details with the CLI  
+
+   * ibmcloud login --sso
+   
+   * ibmcloud target -g App
+
+   * ibmcloud ce project list
+   
+   * ibmcloud ce project select --name JOB
+   
+   * ibmcloud ce jobrun list
+   
+   * ibmcloud ce jobrun get --name scriptjob-jobrun-kgp59
+   
+   * ibmcloud ce jobrun events -n scriptjob-jobrun-kgp59
    
 
 
